@@ -1,0 +1,2 @@
+[⬇ Download Banking Dashboard (v2025.08)](https://github.com/layanbalbeisi/bank-analytics-powerbi/releases/download/2025.08/bank.Dashboard.pbix)
+
