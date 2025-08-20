@@ -27,47 +27,56 @@ A **Power BI** dashboard for analyzing banking customers, cards, and transaction
 ```DAX
 -- Total Transactions
 [Total Transactions] = COUNTROWS('transactions_data')
-
+```
+```DAX
 -- Total Customers
 [Total Customers] = DISTINCTCOUNT('clients_data'[client_id])
-
+```
+```DAX
 -- Average Credit Score
 [Avg Credit Score] = AVERAGE('clients_data'[credit_score])
-
+```
+```DAX
 -- MasterCard Transactions
 [MC Transactions] =
 CALCULATE(
     [Total Transactions],
     FILTER(ALL('cards_data'), 'cards_data'[card_brand] = "MasterCard")
 )
+```
+```DAX
 -- Visa
 [Visa Transactions] =
 CALCULATE(
     [Total Transactions],
     FILTER(ALL('cards_data'), 'cards_data'[card_brand] = "Visa")
 )
-
+```
+```DAX
 -- American Express
 [American Express Transactions] =
 CALCULATE(
     [Total Transactions],
     FILTER(ALL('cards_data'), 'cards_data'[card_brand] = "American Express")
 )
-
+```
+```DAX
 -- Discover
 [Discover Transactions] =
 CALCULATE(
     [Total Transactions],
     FILTER(ALL('cards_data'), 'cards_data'[card_brand] = "Discover")
 )
-
-
+```
+```DAX
 -- Error Rate (Chip = Yes)
 [Error Rate by Chip] =
 DIVIDE(
     CALCULATE(COUNTROWS('transactions_data'), 'transactions_data'[error_flag] = 1, 'transactions_data'[use_chip] = "Yes"),
     CALCULATE(COUNTROWS('transactions_data'), 'transactions_data'[use_chip] = "Yes")
 )
-
+```
+```DAX
 -- Avg Transactions per Customer
 [Avg Tx per Customer] = DIVIDE([Total Transactions], [Total Customers])
+```
