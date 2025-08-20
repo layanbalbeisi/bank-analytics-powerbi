@@ -40,6 +40,27 @@ CALCULATE(
     [Total Transactions],
     FILTER(ALL('cards_data'), 'cards_data'[card_brand] = "MasterCard")
 )
+-- Visa
+[Visa Transactions] =
+CALCULATE(
+    [Total Transactions],
+    FILTER(ALL('cards_data'), 'cards_data'[card_brand] = "Visa")
+)
+
+-- American Express
+[American Express Transactions] =
+CALCULATE(
+    [Total Transactions],
+    FILTER(ALL('cards_data'), 'cards_data'[card_brand] = "American Express")
+)
+
+-- Discover
+[Discover Transactions] =
+CALCULATE(
+    [Total Transactions],
+    FILTER(ALL('cards_data'), 'cards_data'[card_brand] = "Discover")
+)
+
 
 -- Error Rate (Chip = Yes)
 [Error Rate by Chip] =
