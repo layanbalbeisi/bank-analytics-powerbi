@@ -20,16 +20,6 @@ A **Power BI** dashboard for analyzing banking customers, cards, and transaction
 - **Seasonality:** Differences across **2016–2019** suggest behavioral/economic changes → consider aligning time windows or applying seasonal modeling.
 - **Credit Score Mix:** A sizable “medium/low” segment → opportunities for eligibility uplift and risk reduction programs.
 
-> **Note:** These insights are based on sample/training data. Update them to match your actual dataset.
-
----
-
-## 📸 Screenshots
-> Update the paths according to your files under `docs/assets/screens/`.
-
-![Overview](./assets/screens/overview.png)
-![Cards](./assets/screens/cards.png)
-![Transactions](./assets/screens/transactions.png)
 
 ---
 
